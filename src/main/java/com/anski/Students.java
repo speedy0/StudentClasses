@@ -5,16 +5,19 @@ import java.util.ArrayList;
 public class Students {
     ArrayList<Student> students = new ArrayList<>();
 
+    // Takes student object as a parameter and adds it to the list.
     public void addStudent(Student student){
         students.add(student);
     }
 
+    // Takes a list of students objects as a parameter and adds it to the list.
     public void addStudents(ArrayList<Student> students){
         for (Student student : students){
             addStudent(student);
         }
     }
 
+    // Prints all students in order. Uses currStudent variable to number students (for visual display only)
     public void printStudents(){
         int currStudent = 1;
         for (Student student : this.students){
@@ -23,6 +26,7 @@ public class Students {
         }
     }
 
+    // Gets student using the age.
     public void getStudent(int age){
         boolean studentFound = false;
         for (Student student: this.students){
@@ -37,6 +41,7 @@ public class Students {
         }
     }
 
+    // Gets student using name.
     public void getStudent(String name){
         boolean studentFound = false;
         for (Student student: this.students){
